@@ -1,0 +1,45 @@
+<!--h3>All records</h3-->
+<style>
+    //table {background-color : #ccc; }
+    thead {background-color : #ccc; }
+    table tr.False td {background-color : #f99; }
+    table tr.True td {background-color : #9cc; }
+    table tr td {//min-width : 70;
+        padding: 5 15;
+    }
+</style>
+<a href='/new'>New record</a>
+<table>
+    <thead>
+        <tr class=''>
+            <td>Название записи</td>
+            <td>Сумма</td>
+            <td>Дата записи</td>
+            <td>Описание</td>
+            <td>Владелец</td>
+        </tr>
+    </thead>
+ {% for record in records %}
+ <tr class='{{ record.type }}'>
+    <td>{{ record.name}}</td>
+    <td>{{ record.value}}</td>
+    <td>{{ record.date}}</td>
+    <td>{{ record.description}}</td>
+    <td>{{ record.owner}}</td>
+ </tr>
+    {% endfor %}
+</table>
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-20030066-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+

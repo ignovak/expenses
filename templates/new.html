@@ -1,0 +1,21 @@
+<h3>New record</h3>
+<form method='POST'>
+    <p>Название записи</p>
+    <input type='text' name='name'/>
+    <br/>
+    <p>Сумма</p>
+    <input type='text' name='value'/>
+    <br/>
+    <p>Описание</p>
+    <textarea name='description' cols='40' row='10'></textarea>
+    <br/>
+    <label><input type='radio' name='type' value='increase'/>Пополнение</label>
+    <label><input type='radio' name='type' value='decrease' selected='selected'/>Расход</label>
+    <br/>
+    <select name='owner'>
+        <option value='igor'>Игорь</option>
+        <option value='nastya'>Настя</option>
+    </select>
+    <br/>
+    <input type='submit'/>
+</form>

@@ -1,0 +1,13 @@
+application: i-novak
+version: expenses
+runtime: python
+api_version: 1
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: .*
+  script: main.py
+  login: admin
+
